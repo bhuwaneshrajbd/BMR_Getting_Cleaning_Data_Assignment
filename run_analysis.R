@@ -74,4 +74,4 @@ measurements <- whole_dataset[, 3:dim(whole_dataset)[2]]
 clear_dataset <- aggregate(measurements, list(whole_dataset$subject, whole_dataset$activity), mean)
 names(clear_dataset)[1:2] <- c('subject', 'activity')
 write.csv(clear_dataset, "./output/final_clear_dataset.csv")
-write.table(clear_dataset, "./output/final_clear_dataset.txt")
+write.table(clear_dataset, "./output/final_clear_dataset.txt" , row.name=FALSE)
